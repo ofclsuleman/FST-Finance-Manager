@@ -1,4 +1,4 @@
-                    # FST Finance - Setup Instructions
+# FST Finance - Setup Instructions
 
 Thank you for downloading FST Finance! Follow these quick steps to get started:
 
@@ -14,7 +14,5 @@ Thank you for downloading FST Finance! Follow these quick steps to get started:
 3. ENJOY THE PROGRAM
    - Double-click the "FST Finance" icon on your Desktop to launch the application.
 
-------------------------------------------------------------------------
 Support & Contact: ofclsuleman@gmail.com
 Version: 2.0
-========================================================================
