@@ -1,0 +1,5 @@
+# FST - Finance Management runs with NO third-party packages.
+# Requires Python 3.8+ with Tkinter (bundled with the Windows and macOS installers).
+#
+# Only needed to build a standalone executable:
+# pyinstaller>=6.0
