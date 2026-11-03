@@ -1,6 +1,4 @@
-========================================================================
                     # FST Finance - Setup Instructions
-========================================================================
 
 Thank you for downloading FST Finance! Follow these quick steps to get started:
 
