@@ -4,23 +4,26 @@ All notable changes to FST - Finance Management are listed here, newest first.
 
 ---
 
-## v2.6.0 - Customer ledger, invoice images and picker fixes
+v2.6.0 - Customer ledger, invoice images and picker fixes
 
-**Added**
-- Customer and supplier statements in the Ledger open as soon as you pick a name. Typed names are matched too.
-- Ledger period buttons: This month, This year and All time. Leave a date box blank for no limit.
-- Invoice and quotation images can be copied to the clipboard with one click, then pasted anywhere with Ctrl+V (⌘V on a Mac).
-- The image window includes a caption text with its own Copy text button, and a Save image file option.
-- JazzCash payment method for sales, purchases and payments. Money goes to the Bank & mobile wallets account.
+Added
 
-**Changed**
-- "Share on WhatsApp" is replaced by "Copy invoice image" (and "Copy quotation image") on Sales, Purchase, the Sales & Purchase List, the invoice details window and Quotations.
-- The contact picker shows up to 500 customers or suppliers, up from 25.
+Customer and supplier statements in the Ledger open as soon as you pick a name. Typed names are matched too.
+Ledger period buttons: This month, This year and All time. Leave a date box blank for no limit.
+Invoice and quotation images can be copied to the clipboard with one click, then pasted anywhere with Ctrl+V (⌘V on a Mac).
+The image window includes a caption text with its own Copy text button, and a Save image file option.
+JazzCash payment method for sales, purchases and payments. Money goes to the Bank & mobile wallets account.
+Edit a saved sale or purchase from the Sales or Purchase history, the Sales & Purchase List, or the invoice details window. Saving replaces the invoice, keeps its number, and adjusts stock, the ledger and payments.
+Delete a sale or purchase directly from the lists. Stock and ledger entries are reversed.
 
-**Fixed**
-- Customers did not appear in the Sales, Quotation or Ledger pickers. Opening the list searched for the placeholder or the chosen name, so nothing matched. It now shows the full list.
+Changed
 
----
+"Share on WhatsApp" is replaced by "Copy invoice image" (and "Copy quotation image") on Sales, Purchase, the Sales & Purchase List, the invoice details window and Quotations.
+The contact picker shows up to 500 customers or suppliers, up from 25.
+
+Fixed
+
+Customers did not appear in the Sales, Quotation or Ledger pickers. Opening the list searched for the placeholder or the chosen name, so nothing matched. It now shows the full list.
 
 ## v2.5.0 - Sales & purchase list
 
