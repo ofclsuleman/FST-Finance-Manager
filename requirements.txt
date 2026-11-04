@@ -1,0 +1,7 @@
+# Core app: no third-party packages needed (Python 3.8+ with Tkinter).
+#
+# Needed for sharing invoice and quotation images to WhatsApp:
+pillow>=10.1
+
+# Only needed to build a standalone executable:
+# pyinstaller>=6.0
