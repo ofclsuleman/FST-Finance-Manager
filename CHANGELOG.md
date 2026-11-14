@@ -4,7 +4,7 @@ All notable changes to FST - Finance Management are listed here, newest first.
 
 ---
 
-## v2.8.0 - Customer ledger layout
+## v2.7.0 - Customer ledger layout
 
 **Changed**
 - **Customer details** is now a ledger, in the columns: Date | Invoice no | Product | Description | Qty | Amount | Total | Received.
