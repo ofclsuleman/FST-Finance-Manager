@@ -3,6 +3,29 @@
 All notable changes to FST - Finance Management are listed here, newest first.
 
 ---
+
+## v2.7.0 - Customer payments, one Parties page, profile picture
+
+**Added**
+- **Receive payment** for customers. Pick a customer on the Customers page (or in the Ledger), click Receive payment, enter the amount and the date it was received. No items are added. The amount is applied to the oldest unpaid invoices first, and the customer's debt goes down by the same amount. Each payment is dated on the day it was received and posted to the ledger. Overpayments are refused.
+- **Customers & Suppliers** are now one page with two tabs at the top, instead of two sidebar entries.
+- **Profile picture** in Settings → Profile picture. The picture is cropped to a square, stored in the database, and shown in the sidebar. Remove it at any time.
+- **Calendar picker** on every date field (Ledger, Sales & Purchase List, Reports, invoice date of entry, quotation valid-until, and Receive payment). You can still type the date as YYYY-MM-DD.
+- **Mouse wheel** changes the selection in the customer, supplier and product boxes. Wheel up goes to the previous option, wheel down to the next.
+- **Record an expense** button on the Expense breakdown report. It asks for the expense account, the account paid from (Cash or Bank & mobile wallets), the amount, the date and a description, and posts a balanced ledger entry.
+
+**Changed**
+- **Ledger** now shows customer and supplier ledgers only. The Accounts & balances, Journal, Account statement and Quick entry tabs are removed from the menu.
+- Report period fields use the calendar picker.
+- The Expense breakdown note now points to the Record an expense button.
+- About Us shows the correct version number (it showed 2.0.0 before).
+
+**Known gaps**
+- Owner capital, owner drawings and cash-to-bank transfer entries have no button in this version. Tell us where you want them and they will be added.
+- The journal view is not in the menu, so manual entries can't be reviewed or deleted from the app until it is added back.
+
+---
+
 ## v2.6.0 - Customer ledger, invoice images and picker fixes
 
 **Added**
