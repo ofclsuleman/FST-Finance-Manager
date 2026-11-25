@@ -2,7 +2,7 @@
 
 **Version 3.0.0**
 
-A desktop finance app for small businesses. It handles sales and purchase invoices, customers and suppliers, inventory, quotations, customer and supplier ledgers, financial reports, and copying invoice images to share on WhatsApp.
+A desktop finance app for small businesses. It handles sales and purchase invoices, customers and suppliers, inventory, quotations, customer and supplier ledgers, and copying invoice images to share on WhatsApp.
 
 Built with Python and Tkinter, with SQLite for storage. The app runs with no third-party packages, apart from Pillow for image sharing.
 
@@ -17,17 +17,17 @@ Built with Python and Tkinter, with SQLite for storage. The app runs with no thi
   - Discounts, tax, partial payments and a payment history.
   - Set a date of entry for backdated invoices.
   - Credit sales, receipts (text files), and an invoice details view.
-- **Sales & purchase list:** every saved entry, by invoice or by product line, with date, status and search filters.
+- **Sales & purchase list:** every saved entry, by invoice or by product line, with date, status and search filters. Edit, open, delete or copy the image of a saved entry from here.
 - **Customers and suppliers:** one page with two tabs. Saved contacts with balances due, and a **Receive payment** button for customers.
   - Receive a lump-sum payment on any date. It is applied to the oldest unpaid invoices first, and no items are added.
 - **Inventory:** SKU, category, cost and sale price, reorder levels, low-stock filter, and stock adjustments. Selling items at zero stock is allowed, and deleting an invoice restores its stock.
 - **Quotations:** create quotes, copy them as images, track their status, and convert accepted quotes into sales.
-- **Ledger:** customer and supplier statements for any period, with period buttons (This month, This year, All time). Export a statement, or every customer or supplier, to CSV for Excel. For a customer, **Customer details** lists every invoice with its products, descriptions and payments, as CSV or PDF. Export any statement to CSV for Excel. Sales, purchases and payments post to a double-entry journal automatically.
-- **Financial reports:** profit & loss, balance sheet, trial balance, sales and purchase registers, receivables and payables aging, stock valuation, tax summary and expense breakdown. Record an expense from the expense report. Export to CSV or printable text.
+- **Ledger:** customer and supplier statements for any period. Export a statement, or every customer or supplier, to CSV for Excel. For a customer, **Customer details** lists every invoice with its products, descriptions and payments, as CSV or PDF. Sales, purchases and payments post to a double-entry journal automatically.
+- **Financial reports:** profit & loss, balance sheet, trial balance, sales and purchase registers, receivables and payables aging, stock valuation, tax summary and expense breakdown, with export to CSV or printable text. The Reports page is hidden from the menu in this version.
 - **Invoice images:** copy any invoice or quotation as a PNG image to the clipboard, then paste it into WhatsApp. See [Sharing on WhatsApp](#sharing-on-whatsapp).
 - **CSV import and export** for contacts, products and invoice lines, with sample sheets.
 - **Security:** 4-digit password, "Keep me signed in" auto-login, Forgot password through a recovery question, and salted PBKDF2 password hashing.
-- **Profile picture:** choose one in Settings. It is shown in the sidebar.
+- **Profile picture:** choose one in Settings. It is shown at the top right of the window.
 - **Backups:** one click in Settings.
 - **Easy selection:** calendar picker on every date field, and the mouse wheel steps through customers, suppliers and products.
 - **Four colour themes** (Midnight Indigo, Clean Blue, Warm Sand, Emerald Pro), chosen in Settings, and keyboard shortcuts (`Ctrl+1`…`Ctrl+9`, `Ctrl+S`, `Ctrl+N`, `Ctrl+F`).
@@ -42,8 +42,8 @@ Built with Python and Tkinter, with SQLite for storage. The app runs with no thi
 ## Quick start
 
 ```bash
-git clone https://github.com/<your-username>/fst-finance.git
-cd fst-finance
+git clone https://github.com/ofclsuleman/FST-Finance-Manager.git
+cd FST-Finance-Manager
 pip install -r requirements.txt
 python fst_finance.py
 ```
@@ -104,7 +104,7 @@ The tests cover the accounting logic, invoices, stock, customer payments, expens
 ```
 fst_finance.py          Entry point: starts the app and handles auto-login
 fstapp/
-  config.py             Paths, constants, colour themes
+  config.py             Paths, constants, the four colour themes
   database.py           SQLite schema, migrations, invoice and stock rules
   ledger.py             Double-entry journal, posting rules, statements
   ledger_export.py      CSV export of customer and supplier ledgers
@@ -118,8 +118,9 @@ fstapp/
   csv_io.py             CSV import and export helpers
   ui_kit.py             Reusable themed widgets
   auth_view.py          Sign-in, sign-up and Forgot password screens
-  shell.py              Main window: sidebar, top bar, page switching
-  pages/                One module per screen (sales, purchases, parties, ledger, reports, ...)
+  shell.py              Main window: top menu bar, page switching, auto-login
+  pages/                One module per screen: home, invoices (sales and purchases), entries,
+                        parties, inventory, quotes, ledger, reports, settings
                         receive.py is the Receive payment dialog used by Parties and Ledger
 assets/                 App icons (PNG, ICO, SVG)
 tests/                  Unit tests
@@ -139,6 +140,10 @@ tools/make_icons.py     Regenerates the icons
 
 Issues and pull requests are welcome. Please run the test suite before submitting a change.
 
+## Changelog
+
+See [CHANGELOG.md](CHANGELOG.md) for what changed in each version. The current version is 3.0.0.
+
 ## License
 
-Released under the [MIT License](LICENSE).
+Released under the [MIT License](LICENSE). Copyright (c) 2026 Fine Soft & Tech. The software is provided as-is, without warranty; see the license for the full terms.
